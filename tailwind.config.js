@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         barslow: ["Barlow Condensed"],
+        Belleflair: ["Bellefair"],
       },
     },
   },
