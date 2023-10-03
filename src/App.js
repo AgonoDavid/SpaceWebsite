@@ -14,14 +14,14 @@ function App() {
 
 function Navbar() {
   return (
-    <div className="flex justify-between py-5">
+    <div className="flex justify-between py-5 relative">
       <div className=" h-18 flex items-center" style={{ paddingLeft: "80px" }}>
         <img src={logo} alt="logo" />
       </div>
-      <div className="h-15  flex items-center">
-        <img src={line} alt="line" />
+      <div className="h-15  flex items-center ">
+        <img src={line} alt="line" className="absolute left-48 z-10" />
       </div>
-      <div className="nav-bg  flex align-baseline">
+      <div className="nav-bg  flex align-baseline absolute right-0">
         <div
           className="text-white w-full flex
          justify-between px-20 items-center nav-text font-barslow"
