@@ -10,6 +10,21 @@
   width: 100%;
   height: 100vh;
 }
+.Destination {
+  background-image: url(/src/images/Destination.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.Destination-reg {
+  background-image: url(/src/images/destination-reg.png);
+  background-position: right;
+  width: 50%;
+  background-size: cover;
+  height: 10vh;
+}
 
 .nav-bg {
   background-image: url(/src/images/Rectangle.png);
