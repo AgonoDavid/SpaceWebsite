@@ -1,7 +1,7 @@
-// import logo from "./images/logo.svg";
-// import line from "./images/line.png";
+import logo from "../images/logo.svg";
+import line from "../images/line.png";
 
-// import explore from "./images/explore.png";
+import explore from "../images/explore.png";
 
 import { Link } from "react-router-dom";
 
@@ -18,14 +18,11 @@ function Navbar() {
   return (
     <div className="flex justify-between py-5 relative">
       <div className=" h-18 flex items-center" style={{ paddingLeft: "80px" }}>
-        <img
-          // src={logo}
-          alt="logo"
-        />
+        <img src={logo} alt="logo" />
       </div>
       <div className="h-15  flex items-center  ">
         <img
-          //   src={line}
+          src={line}
           alt="line"
           className="absolute left-48 z-10 sm:hidden md:hidden lg:block"
         />
@@ -70,7 +67,7 @@ function Body() {
       </div>
       <div className="w-full ">
         <img
-          // src={explore}
+          src={explore}
           alt="explore"
           className="float-right w-52 sm:text-center "
         />
