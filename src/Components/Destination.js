@@ -60,7 +60,7 @@ function Navbar() {
 
 function Text() {
   return (
-    <p className=" text-white font-barslow text-4xl Destination-body">
+    <p className=" text-white font-barslow text-3xl Destination-body">
       <span className=" text-gray-600">01</span> Pick your destination
     </p>
   );
