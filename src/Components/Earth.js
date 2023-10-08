@@ -38,9 +38,9 @@ function Navbar() {
           <Link to="/Destination" className=" font-barslow font-light">
             <span className=" font-barslow font-bold">01</span> DESTINATION
           </Link>
-          <a href="" className=" font-barslow font-light">
+          <Link to="/Crew" className=" font-barslow font-light">
             <span className=" font-barslow font-bold">02</span> CREW
-          </a>
+          </Link>
           <a href="" className=" font-barslow font-light">
             <span className=" font-barslow font-bold">03</span> TECHNOLOGY
           </a>
