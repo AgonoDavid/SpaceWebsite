@@ -62,7 +62,7 @@
 /* CSS */
 .planet-button {
   background-color: transparent;
-  color: white;
+  color: rgb(191 219 254);
   border: none;
   cursor: pointer;
   outline: none;
@@ -99,5 +99,3 @@
   border-left: none;
   border-top: none;
 }
-
-/* Add any other styles you want for the active button */
