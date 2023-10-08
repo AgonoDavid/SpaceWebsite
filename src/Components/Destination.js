@@ -80,11 +80,11 @@ function Body({ update }) {
 function MoonContent() {
   return (
     <div className="flex justify-between gap-24">
-      <div className="w-full pt-14">
-        <img src={Moon} alt="Moonss" className=" w-96" />
+      <div className=" w-3/5">
+        <img src={Moon} alt="Moonss" className=" w-full" />
       </div>
-      <div className=" w-full">
-        <p className=" text-white font-Belleflair text-9xl">MOON</p>
+      <div className=" w-2/5">
+        <p className=" text-white font-Belleflair text-8xl">MOON</p>
         <p className=" text-white">
           See our planet as you’ve never seen it before. A perfect relaxing trip
           away to help regain perspective and come back refreshed. While you’re
@@ -110,12 +110,12 @@ function MoonContent() {
 function MarsContent() {
   return (
     <div className="flex justify-between gap-24">
-      <div className=" w-full">
+      <div className=" w-2/4">
         <img src={Mars} alt="Moonss" className=" w-full" />
       </div>
-      <div className=" w-full">
+      <div className=" w-2/5">
         {/* <LoopThrough /> */}
-        <p className=" text-white font-Belleflair text-9xl">MARS</p>
+        <p className=" text-white font-Belleflair text-8xl">MARS</p>
         <p className=" text-white">
           Don’t forget to pack your hiking boots. You’ll need them to tackle
           Olympus Mons, the tallest planetary mountain in our solar system. It’s
@@ -140,12 +140,12 @@ function MarsContent() {
 function EuropaContent() {
   return (
     <div className="flex justify-between gap-24">
-      <div className=" w-full">
+      <div className=" w-2/4">
         <img src={Europa} alt="Moonss" className=" w-full" />
       </div>
-      <div className=" w-full">
+      <div className=" w-2/5">
         {/* <LoopThrough /> */}
-        <p className=" text-white font-Belleflair text-9xl">EUROPA</p>
+        <p className=" text-white font-Belleflair text-7xl">EUROPA</p>
         <p className=" text-white">
           The smallest of the four Galilean moons orbiting Jupiter, Europa is a
           winter lover’s dream. With an icy surface, it’s perfect for a bit of
@@ -171,12 +171,12 @@ function EuropaContent() {
 function TitansContent() {
   return (
     <div className="flex justify-between gap-24">
-      <div className=" w-full">
+      <div className=" w-2/4">
         <img src={Titan} alt="Moonss" className=" w-full" />
       </div>
-      <div className=" w-full">
+      <div className=" w-2/5">
         {/* <LoopThrough /> */}
-        <p className=" text-white font-Belleflair text-9xl">TITAN</p>
+        <p className=" text-white font-Belleflair text-8xl">TITAN</p>
         <p className=" text-white">
           The only moon known to have a dense atmosphere other than Earth, Titan
           is a home away from home (just a few hundred degrees colder!). As a
@@ -199,42 +199,12 @@ function TitansContent() {
   );
 }
 
-// function LoopThrough({ selectPlanet, activePlanet, update, setUpdate }) {
-//   return (
-//     <div className="flex justify-between w-fulll Destination-body-content gap-7 text-white">
-//       <button
-//         onClick={() => setUpdate(1)}
-//         className={update === 1 ? "tested" : null}
-//       >
-//         Moon
-//       </button>
-//       <button
-//         onClick={() => setUpdate(2)}
-//         className={update === 2 ? "tested" : null}
-//       >
-//         Mars
-//       </button>
-//       <button
-//         onClick={() => setUpdate(3)}
-//         className={update === 3 ? "tested" : null}
-//       >
-//         Europa
-//       </button>
-//       <button
-//         onClick={() => setUpdate(4)}
-//         className={update === 4 ? "tested" : null}
-//       >
-//         Titan
-//       </button>
-//     </div>
-//   );
-// }
-function LoopThrough({ selectPlanet, activePlanet, update, setUpdate }) {
+function LoopThrough({ update, setUpdate }) {
   return (
-    <div className="flex justify-between w-full Destination-body-content gap-7 text-white">
+    <div className="flex justify-between Destination-body-content gap-7 text-white  w-10">
       <button
         onClick={() => setUpdate(1)}
-        className={`planet-button ${update === 1 ? "tested" : ""}`}
+        className={`planet-button ${update === 1 ? "tested" : ""} w-full`}
       >
         Moon
       </button>
