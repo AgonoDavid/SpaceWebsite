@@ -11,6 +11,7 @@ export default function Body() {
     <div className="Crew-bg">
       <Navbar />
       <Text />
+      {/* <Navigation /> */}
       <FirstCrew />
     </div>
   );
@@ -63,8 +64,11 @@ function Text() {
 function FirstCrew() {
   return (
     <div className="flex justify-between gap-24  Destination-body">
-      <div className=" w-4/5 align-middle flex flex-col justify-center  leading-7">
-        <p className=" text-slate-600 font-Belleflair text-7xl font-Belleflair pb-1">
+      <div
+        className=" w-4/5 align-middle flex flex-col justify-center  leading-7 h-full"
+        style={{ border: "2px solid red" }}
+      >
+        <p className=" text-slate-600 font-Belleflair text-7xl pb-1">
           Commander
         </p>
         <p className=" text-white font-Belleflair text-6xl pb-6">
@@ -82,6 +86,7 @@ function FirstCrew() {
     </div>
   );
 }
+
 function SecondCrew() {
   return (
     <div className="flex justify-between gap-24  Destination-body">
@@ -145,6 +150,15 @@ function FourthCrew() {
       <div className=" w-full" style={{ height: "70vh" }}>
         <img src={Person4} alt="Moonss" className=" w-4/5 h-full object-fit" />
       </div>
+    </div>
+  );
+}
+
+function Navigation() {
+  return (
+    <div className=" flex">
+      <button>⬅️</button>
+      <button>➡️</button>
     </div>
   );
 }

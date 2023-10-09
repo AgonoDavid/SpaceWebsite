@@ -1,5 +1,7 @@
 import logo from "../images/logo.svg";
 import line from "../images/line.png";
+import Lottie from "lottie-react";
+import animationData from "../assets/N9gY8h94zb.json";
 
 import explore from "../images/explore.png";
 
@@ -53,7 +55,7 @@ function Navbar() {
 function Body() {
   return (
     <div className="flex body w-full justify-between ">
-      <div className="text-white w-full ">
+      <div className="text-white w-2/5 ">
         <h3 className="font-barslow text-3xl text-blue-200 pb-6 ">
           SO, YOU WANT TO TRAVEL TO
         </h3>
@@ -65,12 +67,16 @@ function Body() {
           experience!
         </p>
       </div>
-      <div className="w-full ">
+      {/* <div className="w-full ">
         <img
           src={explore}
           alt="explore"
           className="float-right w-52 sm:text-center "
         />
+      </div> */}
+
+      <div className=" w-2/5">
+        <Lottie animationData={animationData} />
       </div>
     </div>
   );
