@@ -54,7 +54,7 @@ function Navbar() {
 
 function Body() {
   return (
-    <div className=" lg:flex body  lg:w-full justify-between  sm: -mt-[-120px]">
+    <div className=" lg:flex body  lg:w-full justify-between  sm: -mt-[-90px] ">
       <div className="text-white lg:w-2/5  lg:text-start  max-sm: w-80 sm: m-auto sm: text-center ">
         <h3 className="font-barslow lg:text-3xl sm: text-xl text-blue-200 lg: pb-6  ">
           SO, YOU WANT TO TRAVEL TO
