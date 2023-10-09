@@ -1,7 +1,7 @@
 import logo from "../images/logo.svg";
 import line from "../images/line.png";
 import Lottie from "lottie-react";
-import animationData from "../assets/N9gY8h94zb.json";
+import animation from "../assets/explore.json";
 
 import explore from "../images/explore.png";
 
@@ -76,7 +76,7 @@ function Body() {
       </div> */}
 
       <div className=" w-2/5">
-        <Lottie animationData={animationData} />
+        <Lottie animationData={animation} />
       </div>
     </div>
   );
