@@ -108,3 +108,20 @@
   border-left: none;
   border-top: none;
 }
+
+.s-m-g-t {
+  margin-top: 22%;
+}
+
+/* SMALL SCREEEN */
+
+@media only screen and (max-width: 600px) {
+  .home-bg-sm {
+    background-image: url(/src/images/md-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+  }
+}

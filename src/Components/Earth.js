@@ -54,29 +54,25 @@ function Navbar() {
 
 function Body() {
   return (
-    <div className="flex body w-full justify-between ">
-      <div className="text-white w-2/5 ">
-        <h3 className="font-barslow text-3xl text-blue-200 pb-6 ">
+    <div className=" lg:flex body  lg:w-full justify-between  sm: -mt-[-120px]">
+      <div className="text-white lg:w-2/5  lg:text-start  max-sm: w-80 sm: m-auto sm: text-center ">
+        <h3 className="font-barslow lg:text-3xl sm: text-xl text-blue-200 lg: pb-6  ">
           SO, YOU WANT TO TRAVEL TO
         </h3>
-        <h1 className="text-9xl pb-6 font-Belleflair">SPACE</h1>
-        <p className="leading-9  text-blue-200  font-barslow">
+        <h1 className="lg:text-9xl pb-6 font-Belleflair sm: text-6xl">SPACE</h1>
+        <p className="lg:leading-9  sm:leading-8 text-blue-200  font-barslow">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we’ll give you a truly out of this world
           experience!
         </p>
       </div>
-      {/* <div className="w-full ">
-        <img
-          src={explore}
-          alt="explore"
-          className="float-right w-52 sm:text-center "
-        />
-      </div> */}
 
-      <div className=" w-2/5">
-        <Lottie animationData={animation} />
+      <div className=" lg:w-2/5 sm:w-full text-center sm:mt-6">
+        <Lottie
+          animationData={animation}
+          className=" w-48 sm:w-full mx-auto "
+        />
       </div>
     </div>
   );

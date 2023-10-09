@@ -6,7 +6,7 @@ import Crew from "./Components/Crew";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App home-bg-sm">
       <Routes>
         <Route path="/" element={<Earth />}></Route>
         <Route path="Destination" element={<Destination />}></Route>
