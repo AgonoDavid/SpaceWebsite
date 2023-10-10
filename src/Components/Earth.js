@@ -3,7 +3,7 @@ import line from "../images/line.png";
 import Lottie from "lottie-react";
 import animation from "../assets/explore.json";
 
-import explore from "../images/explore.png";
+import ReactTyped from "react-typed";
 
 import { Link } from "react-router-dom";
 
@@ -26,7 +26,7 @@ function Navbar() {
         <img
           src={line}
           alt="line"
-          className="absolute left-48 z-10 sm:hidden md:hidden lg:block"
+          className="absolute left-48 z-10 sm:hidden lg:block"
         />
       </div>
       <div className="nav-bg  flex align-baseline absolute right-0">
@@ -34,18 +34,18 @@ function Navbar() {
           className="text-white w-full flex
              justify-between px-20 items-center nav-text "
         >
-          <a href="" className=" font-barslow font-light">
+          <Link to="" className=" font-barslow font-light">
             <span className=" font-barslow font-bold">00</span> HOME
-          </a>
+          </Link>
           <Link to="/Destination" className=" font-barslow font-light">
             <span className=" font-barslow font-bold">01</span> DESTINATION
           </Link>
           <Link to="/Crew" className=" font-barslow font-light">
             <span className=" font-barslow font-bold">02</span> CREW
           </Link>
-          <a href="" className=" font-barslow font-light">
+          <Link to="" className=" font-barslow font-light">
             <span className=" font-barslow font-bold">03</span> TECHNOLOGY
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -59,7 +59,9 @@ function Body() {
         <h3 className="font-barslow lg:text-3xl sm: text-xl text-blue-200 lg: pb-6  ">
           SO, YOU WANT TO TRAVEL TO
         </h3>
-        <h1 className="lg:text-9xl pb-6 font-Belleflair sm: text-6xl">SPACE</h1>
+        <h1 className="lg:text-8xl pb-6 font-Belleflair sm: text-6xl">
+          <ReactTyped strings={["SPACE?", "Let's Go!"]} typeSpeed={100} loop />
+        </h1>
         <p className="lg:leading-9  sm:leading-8 text-blue-200  font-barslow">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
