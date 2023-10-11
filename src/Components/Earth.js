@@ -29,7 +29,7 @@ function Navbar() {
           className="absolute left-48 z-10 sm:hidden lg:block"
         />
       </div>
-      <div className="nav-bg  flex align-baseline absolute right-0">
+      <div className="nav-bg  flex align-baseline absolute right-0 ">
         <div
           className="text-white w-full flex
              justify-between px-20 items-center nav-text "

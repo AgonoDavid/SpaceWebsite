@@ -4,7 +4,7 @@ import Moon from "../images/Moon.png";
 export function MoonContent() {
   return (
     <div className="flex justify-between gap-24">
-      <div className=" w-3/5">
+      <div className=" w-2/5">
         <img src={Moon} alt="Moonss" className=" w-full" />
       </div>
       <div className=" w-2/5">

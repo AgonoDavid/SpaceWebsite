@@ -4,7 +4,7 @@ import Titan from "../images/Titan.png";
 export function TitansContent() {
   return (
     <div className="flex justify-between gap-24">
-      <div className=" w-2/4">
+      <div className=" w-2/5">
         <img src={Titan} alt="Moonss" className=" w-full" />
       </div>
       <div className=" w-2/5">

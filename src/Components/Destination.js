@@ -79,31 +79,34 @@ function Body({ update }) {
 
 function LoopThrough({ update, setUpdate }) {
   return (
-    <div className="flex justify-between Destination-body-content gap-7 w-10">
-      <button
-        onClick={() => setUpdate(1)}
-        className={`planet-button ${update === 1 ? "tested" : ""} w-full`}
-      >
-        Moon
-      </button>
-      <button
-        onClick={() => setUpdate(2)}
-        className={`planet-button ${update === 2 ? "tested" : ""}`}
-      >
-        Mars
-      </button>
-      <button
-        onClick={() => setUpdate(3)}
-        className={`planet-button ${update === 3 ? "tested" : ""}`}
-      >
-        Europa
-      </button>
-      <button
-        onClick={() => setUpdate(4)}
-        className={`planet-button ${update === 4 ? "tested" : ""}`}
-      >
-        Titan
-      </button>
+    <div className="flex justify-between Destination-body-content gap-7 w-full ">
+      <div className=" w-2/5"></div>
+      <div className=" w-2/5 flex justify-between ">
+        <button
+          onClick={() => setUpdate(1)}
+          className={`planet-button ${update === 1 ? "tested" : ""} `}
+        >
+          Moon
+        </button>
+        <button
+          onClick={() => setUpdate(2)}
+          className={`planet-button ${update === 2 ? "tested" : ""}`}
+        >
+          Mars
+        </button>
+        <button
+          onClick={() => setUpdate(3)}
+          className={`planet-button ${update === 3 ? "tested" : ""}`}
+        >
+          Europa
+        </button>
+        <button
+          onClick={() => setUpdate(4)}
+          className={`planet-button ${update === 4 ? "tested" : ""}`}
+        >
+          Titan
+        </button>
+      </div>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import Mars from "../images/Mars.png";
 export function MarsContent() {
   return (
     <div className="flex justify-between gap-24">
-      <div className=" w-2/4">
+      <div className=" w-2/5">
         <img src={Mars} alt="Moonss" className=" w-full" />
       </div>
       <div className=" w-2/5">

@@ -4,7 +4,7 @@ import Europa from "../images/Europa.png";
 export function EuropaContent() {
   return (
     <div className="flex justify-between gap-24">
-      <div className=" w-2/4">
+      <div className=" w-2/5">
         <img src={Europa} alt="Moonss" className=" w-full" />
       </div>
       <div className=" w-2/5">
