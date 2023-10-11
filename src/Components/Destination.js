@@ -79,7 +79,7 @@ function Body({ update }) {
 
 function LoopThrough({ update, setUpdate }) {
   return (
-    <div className="flex justify-between Destination-body-content gap-7 w-full ">
+    <div className="flex justify-between Destination-body-content gap-7 w-full">
       <div className=" w-2/5"></div>
       <div className=" w-2/5 flex justify-between ">
         <button
