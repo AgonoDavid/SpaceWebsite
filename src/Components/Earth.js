@@ -2,7 +2,7 @@ import line from "../images/line.png";
 import Lottie from "lottie-react";
 import animation from "../assets/explore.json";
 
-import ReactTyped from "react-typed";
+// import ReactTyped from "react-typed";
 
 import { Link } from "react-router-dom";
 
@@ -25,7 +25,8 @@ function Body() {
           SO, YOU WANT TO TRAVEL TO
         </h3>
         <h1 className="lg:text-8xl pb-6 font-Belleflair sm: text-6xl">
-          <ReactTyped strings={["SPACE?", "Let's Go!"]} typeSpeed={100} loop />
+          {/* <ReactTyped strings={["SPACE?", "Let's Go!"]} typeSpeed={100} loop /> */}
+          SPACE
         </h1>
         <p className="lg:leading-9  sm:leading-8 text-blue-200  font-barslow">
           Let’s face it; if you want to go to space, you might as well genuinely
