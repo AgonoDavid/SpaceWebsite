@@ -5,61 +5,144 @@ import logo from "../images/logo.svg";
 import MenuOpen from "../images/hamburger-open.svg";
 import { Link } from "react-router-dom";
 
-export default function Navbar({ fixed }) {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+export default function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
+
   return (
-    <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 nav-bg mb-3">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <img src={logo} alt="logo" />
-            <button
-              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-              type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}
-            >
-              {navbarOpen ? <img src={MenuOpen} alt="open" /> : <FiMenu />}
-            </button>
-          </div>
+    <div className="flex items-center justify-between  py-8">
+      <a href="/">
+        <img src={logo} alt="logo" />
+      </a>
+      <nav>
+        <section className="MOBILE-MENU flex lg:hidden">
           <div
-            className={
-              "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex" : " hidden")
-            }
-            id="example-navbar-danger"
+            className="HAMBURGER-ICON space-y-2"
+            onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  to="/"
-                >
-                  <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i>
-                  <span className="ml-2">Home</span>
-                </Link>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+          </div>
+
+          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+            <div
+              className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
+              onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
+            >
+              <svg
+                className="h-8 w-8 text-gray-600"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </div>
+            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
+              <li className="border-b border-gray-400 my-8 uppercase">
+                <a href="/about">About</a>
               </li>
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  to="/Destination"
-                >
-                  <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i>
-                  <span className="ml-2">Destination</span>
-                </Link>
+              <li className="border-b border-gray-400 my-8 uppercase">
+                <a href="/portfolio">Portfolio</a>
               </li>
-              <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
-                >
-                  <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i>
-                  <span className="ml-2">Pin</span>
-                </a>
+              <li className="border-b border-gray-400 my-8 uppercase">
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>
-        </div>
+        </section>
+
+        <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
       </nav>
-    </>
+    </div>
   );
 }
+// export default function NavBar() {
+//   const [navbar, setNavbar] = useState(false);
+
+//   return (
+//     <nav className="w-full nav-bg pb-10 shadow relative">
+//       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 relative">
+//         <div>
+//           <div className="flex items-center justify-between py-3 md:py-5 md:block">
+//             <a href="javascript:void(0)">
+//               <h2 className="text-2xl font-bold">LOGO</h2>
+//             </a>
+//             <div className="md:hidden absolute top-0 right-0">
+//               <button
+//                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+//                 onClick={() => setNavbar(!navbar)}
+//               >
+//                 {navbar ? (
+//                   <svg
+//                     xmlns="http://www.w3.org/2000/svg"
+//                     className="w-6 h-6"
+//                     viewBox="0 0 20 20"
+//                     fill="currentColor"
+//                   >
+//                     <path
+//                       fillRule="evenodd"
+//                       d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+//                       clipRule="evenodd"
+//                     />
+//                   </svg>
+//                 ) : (
+//                   <svg
+//                     xmlns="http://www.w3.org/2000/svg"
+//                     className="w-6 h-6"
+//                     fill="none"
+//                     viewBox="0 0 24 24"
+//                     stroke="currentColor"
+//                     strokeWidth={2}
+//                   >
+//                     <path
+//                       strokeLinecap="round"
+//                       strokeLinejoin="round"
+//                       d="M4 6h16M4 12h16M4 18h16"
+//                     />
+//                   </svg>
+//                 )}
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//         <div>
+//           <div
+//             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+//               navbar ? "block" : "hidden"
+//             } absolute top-0 right-0 md:relative nav-bg p-0`}
+//           >
+//             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+//               <li className="text-gray-600 hover:text-blue-600">
+//                 <a href="javascript:void(0)">Home</a>
+//               </li>
+//               <li className="text-gray-600 hover:text-blue-600">
+//                 <a href="javascript:void(0)">Blog</a>
+//               </li>
+//               <li className="text-gray-600 hover:text-blue-600">
+//                 <a href="javascript:void(0)">About US</a>
+//               </li>
+//               <li className="text-gray-600 hover:text-blue-600">
+//                 <a href="javascript:void(0)">Contact US</a>
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// }
