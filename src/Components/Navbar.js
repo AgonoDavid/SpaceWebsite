@@ -9,7 +9,7 @@ export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
   return (
-    <div className="flex items-center justify-between  py-8">
+    <div className="flex items-center justify-between  py-8 px-7">
       <a href="/">
         <img src={logo} alt="logo" />
       </a>
@@ -42,29 +42,35 @@ export default function Header() {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </div>
-            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
+            <ul className="MENU-LINK-MOBILE-OPEN  flex flex-col items-center justify-between min-h-[250px]">
               <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/about">About</a>
+                <Link to="/">Home</Link>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/portfolio">Portfolio</a>
+                <Link to="/Destination">Destination</Link>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/contact">Contact</a>
+                <Link to="/Crew">Crew</Link>
+              </li>
+              <li className="border-b border-gray-400 my-8 uppercase">
+                <Link to="/Technology">Technology</Link>
               </li>
             </ul>
           </div>
         </section>
 
-        <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
+        <ul className="DESKTOP-MENU hidden space-x-8 lg:flex text-white">
           <li>
-            <a href="/about">About</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/portfolio">Portfolio</a>
+            <Link to="/Destination">Destination</Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link to="/Crew">Crew</Link>
+          </li>
+          <li>
+            <Link to="/Technology">Technology</Link>
           </li>
         </ul>
       </nav>
