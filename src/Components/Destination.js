@@ -7,6 +7,7 @@ import { MoonContent } from "./MoonContent";
 import { MarsContent } from "./MarsContent";
 import { EuropaContent } from "./EuropaContent";
 import { TitansContent } from "./TitansContent";
+import Navbar from "./Navbar";
 
 export default function Destination() {
   const [update, setUpdate] = useState(1);
@@ -18,42 +19,6 @@ export default function Destination() {
       <LoopThrough update={update} setUpdate={setUpdate} />
 
       <Body update={update} />
-    </div>
-  );
-}
-
-function Navbar() {
-  return (
-    <div className="flex justify-between py-5 relative">
-      <div className=" h-18 flex items-center" style={{ paddingLeft: "80px" }}>
-        <img src={logo} alt="logo" />
-      </div>
-      <div className="h-15  flex items-center  ">
-        <img
-          src={line}
-          alt="line"
-          className="absolute left-48 z-10 sm:hidden md:hidden lg:block"
-        />
-      </div>
-      <div className="Destination-reg  flex align-baseline absolute right-0">
-        <div
-          className="text-white w-full flex
-               justify-between px-20 items-center nav-text "
-        >
-          <Link to="/" className=" font-barslow font-light">
-            <span className=" font-barslow font-bold">00</span> HOME
-          </Link>
-          <a href="" className=" font-barslow font-light">
-            <span className=" font-barslow font-bold">01</span> DESTINATION
-          </a>
-          <Link to="/Crew" className=" font-barslow font-light">
-            <span className=" font-barslow font-bold">02</span> CREW
-          </Link>
-          <a href="" className=" font-barslow font-light">
-            <span className=" font-barslow font-bold">03</span> TECHNOLOGY
-          </a>
-        </div>
-      </div>
     </div>
   );
 }
