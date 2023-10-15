@@ -25,7 +25,7 @@ export default function Destination() {
 
 function Text() {
   return (
-    <p className=" text-white font-barslow text-3xl Destination-body">
+    <p className=" text-white font-barslow lg:text-3xl lg:mt-[10px] mt-[-5px] Destination-body">
       <span className=" text-gray-600">01</span> Pick your destination
     </p>
   );
@@ -33,7 +33,7 @@ function Text() {
 
 function Body({ update }) {
   return (
-    <div className="Destination-body-content">
+    <div className="Destination-body-content ">
       {update === 1 ? <MoonContent /> : null}
       {update === 2 ? <MarsContent /> : null}
       {update === 3 ? <EuropaContent /> : null}
