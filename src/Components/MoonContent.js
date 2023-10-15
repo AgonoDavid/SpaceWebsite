@@ -3,13 +3,17 @@ import Moon from "../images/Moon.png";
 
 export function MoonContent() {
   return (
-    <div className=" lg:flex lg:w-full  justify-between gap-24">
-      <div className=" w-2/5">
-        <img src={Moon} alt="Moonss" className=" w-full" />
+    <div className=" lg:flex lg:w-full  w-full justify-between gap-24">
+      <div className=" lg:w-2/5 sm:w-full md:w-full text-center sm:mt-6">
+        <img
+          src={Moon}
+          alt="Moonss"
+          className=" lg:w-full w-2/5 mx-auto  pb-5 "
+        />
       </div>
       <div className=" lg:w-2/5 sm:w-2/3 lg:text-start max-sm: w-80 sm: m-auto text-center">
         <p className=" text-white font-Belleflair lg:text-8xl text-4xl">MOON</p>
-        <p className=" text-blue-200  font-barslow w-full lg:text-base text-[13px] md:text-2xl">
+        <p className=" text-blue-200  font-barslow w-full lg:text-base text-[13px] md:text-xl pt-1">
           See our planet as you’ve never seen it before. A perfect relaxing trip
           away to help regain perspective and come back refreshed. While you’re
           there, take in some history by visiting the Luna 2 and Apollo 11

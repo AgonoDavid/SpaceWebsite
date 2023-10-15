@@ -25,7 +25,7 @@ export default function Destination() {
 
 function Text() {
   return (
-    <p className=" text-white font-barslow lg:text-3xl lg:mt-[10px] mt-[-5px] Destination-body">
+    <p className=" font-barslow lg:text-3xl lg:mt-[10px] mt-[-5px] Destination-body text-white lg:w-full  lg:text-start  max-sm: w-80 sm: m-auto sm: text-center ">
       <span className=" text-gray-600">01</span> Pick your destination
     </p>
   );
@@ -33,7 +33,7 @@ function Text() {
 
 function Body({ update }) {
   return (
-    <div className="Destination-body-content ">
+    <div className="Destination-body-content">
       {update === 1 ? <MoonContent /> : null}
       {update === 2 ? <MarsContent /> : null}
       {update === 3 ? <EuropaContent /> : null}
@@ -44,9 +44,9 @@ function Body({ update }) {
 
 function LoopThrough({ update, setUpdate }) {
   return (
-    <div className="flex justify-between Destination-body-content gap-7 w-full">
-      <div className=" w-2/5"></div>
-      <div className=" w-2/5 flex justify-between ">
+    <div className="flex justify-between gap-7 w-full lg:max-w-[800px] mt-5 m-auto">
+      <div className=" lg:w-2/5 hidden lg:block"></div>
+      <div className=" lg:w-2/5 max-sm: w-70 sm: m-auto gap-10 flex justify-between ">
         <button
           onClick={() => setUpdate(1)}
           className={`planet-button ${update === 1 ? "tested" : ""} `}
