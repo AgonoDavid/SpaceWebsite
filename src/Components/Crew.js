@@ -1,18 +1,18 @@
 import logo from "../images/logo.svg";
 import line from "../images/line.png";
 import { Link } from "react-router-dom";
-import Person1 from "../images/Person-1.png";
-import Person2 from "../images/Person-2.png";
-import Person3 from "../images/Person-3.png";
-import Person4 from "../images/Person-4.png";
+import { FirstCrew } from "./FirstCrew";
+import { SecondCrew } from "./SecondCrew";
+import { ThirdCrew } from "./ThirdCrew";
+import { FourthCrew } from "./FourthCrew";
+import { useState } from "react";
 
 export default function Body() {
   return (
     <div className="Crew-bg">
       <Navbar />
       <Text />
-      {/* <Navigation /> */}
-      <FirstCrew />
+      <NavigateCrew />
     </div>
   );
 }
@@ -44,9 +44,9 @@ function Navbar() {
           <Link to="/Crew" className=" font-barslow font-light">
             <span className=" font-barslow font-bold">02</span> CREW
           </Link>
-          <a href="" className=" font-barslow font-light">
+          <Link to="/Technology" className=" font-barslow font-light">
             <span className=" font-barslow font-bold">03</span> TECHNOLOGY
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -61,104 +61,45 @@ function Text() {
   );
 }
 
-function FirstCrew() {
+function NavigateCrew() {
+  const [crew, setCrew] = useState(1);
+
   return (
-    <div className="flex justify-between gap-24  Destination-body">
+    <div>
+      <div>
+        {crew === 1 ? <FirstCrew /> : null}
+        {crew === 2 ? <SecondCrew /> : null}
+        {crew === 3 ? <ThirdCrew /> : null}
+        {crew === 4 ? <FourthCrew /> : null}
+      </div>
       <div
-        className=" w-4/5 align-middle flex flex-col justify-center  leading-7 h-full"
-        style={{ border: "2px solid red" }}
+        classname="flex w-full justify-between Destination-body "
+        style={{ color: "white", border: "2px solid pink" }}
       >
-        <p className=" text-slate-600 font-Belleflair text-7xl pb-1">
-          Commander
-        </p>
-        <p className=" text-white font-Belleflair text-6xl pb-6">
-          Douglas Hurley
-        </p>
-        <p className=" text-blue-200  font-barslow">
-          Douglas Gerald Hurley is an American engineer, former Marine Corps
-          pilot and former NASA astronaut. He launched into space for the third
-          time as commander of Crew Dragon Demo-2.
-        </p>
+        <div
+          className="font-barslow w-2/5"
+          style={{ color: "white", border: "2px solid red" }}
+        >
+          <button className="btn" onClick={() => setCrew(1)}>
+            1
+          </button>
+          <button className="btn" onClick={() => setCrew(2)}>
+            2
+          </button>
+          <button className="btn" onClick={() => setCrew(3)}>
+            3
+          </button>
+          <button className="btn" onClick={() => setCrew(4)}>
+            4
+          </button>
+        </div>
+        <div
+          classname=" w-2/4"
+          style={{ color: "black", border: "2px solid green" }}
+        >
+          i love jesus
+        </div>
       </div>
-      <div className=" w-full" style={{ height: "70vh" }}>
-        <img src={Person1} alt="Moonss" className=" w-4/5 h-full object-fit" />
-      </div>
-    </div>
-  );
-}
-
-function SecondCrew() {
-  return (
-    <div className="flex justify-between gap-24  Destination-body">
-      <div className=" w-4/5 align-middle flex flex-col justify-center  leading-7">
-        <p className=" text-slate-600 font-Belleflair text-7xl font-Belleflair pb-1">
-          Commander
-        </p>
-        <p className=" text-white font-Belleflair text-6xl pb-6">
-          Douglas Hurley
-        </p>
-        <p className=" text-blue-200  font-barslow">
-          Douglas Gerald Hurley is an American engineer, former Marine Corps
-          pilot and former NASA astronaut. He launched into space for the third
-          time as commander of Crew Dragon Demo-2.
-        </p>
-      </div>
-      <div className=" w-full" style={{ height: "70vh" }}>
-        <img src={Person2} alt="Moonss" className=" w-4/5 h-full object-fit" />
-      </div>
-    </div>
-  );
-}
-function ThirdCrew() {
-  return (
-    <div className="flex justify-between gap-24  Destination-body">
-      <div className=" w-4/5 align-middle flex flex-col justify-center  leading-7">
-        <p className=" text-slate-600 font-Belleflair text-7xl font-Belleflair pb-1">
-          Commander
-        </p>
-        <p className=" text-white font-Belleflair text-6xl pb-6">
-          Douglas Hurley
-        </p>
-        <p className=" text-blue-200  font-barslow">
-          Douglas Gerald Hurley is an American engineer, former Marine Corps
-          pilot and former NASA astronaut. He launched into space for the third
-          time as commander of Crew Dragon Demo-2.
-        </p>
-      </div>
-      <div className=" w-full" style={{ height: "70vh" }}>
-        <img src={Person3} alt="Moonss" className=" w-4/5 h-full object-fit" />
-      </div>
-    </div>
-  );
-}
-function FourthCrew() {
-  return (
-    <div className="flex justify-between gap-24  Destination-body">
-      <div className=" w-4/5 align-middle flex flex-col justify-center  leading-7">
-        <p className=" text-slate-600 font-Belleflair text-7xl font-Belleflair pb-1">
-          Commander
-        </p>
-        <p className=" text-white font-Belleflair text-6xl pb-6">
-          Douglas Hurley
-        </p>
-        <p className=" text-blue-200  font-barslow">
-          Douglas Gerald Hurley is an American engineer, former Marine Corps
-          pilot and former NASA astronaut. He launched into space for the third
-          time as commander of Crew Dragon Demo-2.
-        </p>
-      </div>
-      <div className=" w-full" style={{ height: "70vh" }}>
-        <img src={Person4} alt="Moonss" className=" w-4/5 h-full object-fit" />
-      </div>
-    </div>
-  );
-}
-
-function Navigation() {
-  return (
-    <div className=" flex">
-      <button>⬅️</button>
-      <button>➡️</button>
     </div>
   );
 }

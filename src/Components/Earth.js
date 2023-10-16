@@ -3,9 +3,7 @@ import animation from "../assets/explore.json";
 
 // import ReactTyped from "react-typed";
 
-import { Link } from "react-router-dom";
-
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./Navbar";
 export default function Earth() {
   return (
