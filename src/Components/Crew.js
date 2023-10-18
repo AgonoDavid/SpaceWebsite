@@ -43,7 +43,7 @@ function NavigateCrew({ crew }) {
 function Step({ setCrew, crew }) {
   return (
     <div
-      className="w-full flex gap-2 btnStyle lg:mt-[-90px] mt-[40px] font-barslow lg:max-w-[1000px] max-w-[200px] mx-auto"
+      className="w-full flex gap-2 btnStyle lg:mt-[-90px] mt-[50px] md:mt-[180px] font-barslow lg:max-w-[1000px] max-w-[200px] mx-auto"
       style={{ color: "white" }}
     >
       <button className={crew === 1 ? "button" : ""} onClick={() => setCrew(1)}>
