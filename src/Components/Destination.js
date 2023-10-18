@@ -13,7 +13,7 @@ export default function Destination() {
   const [update, setUpdate] = useState(1);
 
   return (
-    <div className="Destination">
+    <div className="Destination ">
       <div>
         <Navbar />
       </div>
