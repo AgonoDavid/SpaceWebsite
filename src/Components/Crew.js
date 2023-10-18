@@ -8,11 +8,13 @@ import { FourthCrew } from "./FourthCrew";
 import { useState } from "react";
 
 export default function Body() {
+  const [crew, setCrew] = useState(1);
   return (
     <div className="Crew-bg">
       <Navbar />
       <Text />
-      <NavigateCrew />
+      <NavigateCrew crew={crew} />
+      <Step setCrew={setCrew} crew={crew} />
     </div>
   );
 }
@@ -61,9 +63,7 @@ function Text() {
   );
 }
 
-function NavigateCrew() {
-  const [crew, setCrew] = useState(1);
-
+function NavigateCrew({ crew }) {
   return (
     <div>
       <div>
@@ -72,34 +72,27 @@ function NavigateCrew() {
         {crew === 3 ? <ThirdCrew /> : null}
         {crew === 4 ? <FourthCrew /> : null}
       </div>
-      <div
-        classname="flex w-full justify-between Destination-body "
-        style={{ color: "white", border: "2px solid pink" }}
-      >
-        <div
-          className="font-barslow w-2/5"
-          style={{ color: "white", border: "2px solid red" }}
-        >
-          <button className="btn" onClick={() => setCrew(1)}>
-            1
-          </button>
-          <button className="btn" onClick={() => setCrew(2)}>
-            2
-          </button>
-          <button className="btn" onClick={() => setCrew(3)}>
-            3
-          </button>
-          <button className="btn" onClick={() => setCrew(4)}>
-            4
-          </button>
-        </div>
-        <div
-          classname=" w-2/4"
-          style={{ color: "black", border: "2px solid green" }}
-        >
-          i love jesus
-        </div>
-      </div>
+    </div>
+  );
+}
+function Step({ setCrew, crew }) {
+  return (
+    <div
+      className="w-full flex gap-2 Destination-body-crew btnStyle"
+      style={{ color: "white" }}
+    >
+      <button className={crew === 1 ? "button" : ""} onClick={() => setCrew(1)}>
+        1
+      </button>
+      <button className={crew === 2 ? "button" : ""} onClick={() => setCrew(2)}>
+        2
+      </button>
+      <button className={crew === 3 ? "button" : ""} onClick={() => setCrew(3)}>
+        3
+      </button>
+      <button className={crew === 4 ? "button" : ""} onClick={() => setCrew(4)}>
+        4
+      </button>
     </div>
   );
 }

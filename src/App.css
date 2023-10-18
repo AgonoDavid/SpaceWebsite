@@ -43,6 +43,10 @@
   max-width: 1000px;
   margin: 30px auto;
 }
+.Destination-body-crew {
+  max-width: 1000px;
+  margin: -35px auto;
+}
 .Destination-body-content {
   max-width: 800px;
   margin: 30px auto;
@@ -117,9 +121,35 @@
   background-repeat: no-repeat;
 }
 .btn {
-  border: 1px solid white;
-  border-radius: 100%;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;
 }
+.selected {
+  background-color: grey;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.btnStyle .button {
+  color: Black;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;
+}
+.btnStyle > button {
+  height: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border: 2px solid;
+}
+
 /* SMALL SCREEEN */
 
 @media only screen and (max-width: 600px) {

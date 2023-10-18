@@ -4,7 +4,7 @@ export function FourthCrew() {
   return (
     <div className="flex justify-between gap-24  Destination-body">
       <div className=" w-4/5 align-middle flex flex-col justify-center  leading-7">
-        <p className=" text-slate-600 font-Belleflair text-7xl pb-1">
+        <p className=" text-slate-600 font-Belleflair text-6xl pb-1">
           Flight Engineer
         </p>
         <p className=" text-white font-Belleflair text-6xl pb-6">

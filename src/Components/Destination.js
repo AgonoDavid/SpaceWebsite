@@ -17,7 +17,6 @@ export default function Destination() {
       <Navbar />
       <Text />
       <LoopThrough update={update} setUpdate={setUpdate} />
-
       <Body update={update} />
     </div>
   );
