@@ -15,17 +15,15 @@ export default function Header() {
         <img src={logo} alt="logo" />
       </a>
       <div className=" hidden lg:block">
-        <img src={line} />
+        <img src={line} alt="line" />
       </div>
       <nav>
         <section className="MOBILE-MENU flex lg:hidden">
           <div
-            className="HAMBURGER-ICON space-y-2"
+            className="HAMBURGER-ICON space-y-2 text-3xl"
             onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <FiMenu />
           </div>
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
@@ -34,7 +32,7 @@ export default function Header() {
               onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
             >
               <svg
-                className="h-8 w-8 text-gray-600"
+                className="h-8 w-8 text-black-600"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -46,18 +44,18 @@ export default function Header() {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </div>
-            <ul className="MENU-LINK-MOBILE-OPEN  text-white flex flex-col items-center justify-between min-h-[250px]">
+            <ul className="MENU-LINK-MOBILE-OPEN font-barslow text-white flex flex-col items-center justify-between min-h-[250px]">
               <li className="border-b border-gray-400 my-8 uppercase">
-                <Link to="/">Home</Link>
+                <Link to="/">00 Home</Link>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase">
-                <Link to="/Destination">Destination</Link>
+                <Link to="/Destination">01 Destination</Link>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase">
-                <Link to="/Crew">Crew</Link>
+                <Link to="/Crew">02 Crew</Link>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase">
-                <Link to="/Technology">Technology</Link>
+                <Link to="/Technology">03 Technology</Link>
               </li>
             </ul>
           </div>

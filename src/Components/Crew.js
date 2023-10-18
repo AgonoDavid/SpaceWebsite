@@ -6,6 +6,7 @@ import { SecondCrew } from "./SecondCrew";
 import { ThirdCrew } from "./ThirdCrew";
 import { FourthCrew } from "./FourthCrew";
 import { useState } from "react";
+import Navbar from "./Navbar";
 
 export default function Body() {
   const [crew, setCrew] = useState(1);
@@ -19,45 +20,9 @@ export default function Body() {
   );
 }
 
-function Navbar() {
-  return (
-    <div className="flex justify-between py-5 relative">
-      <div className=" h-18 flex items-center" style={{ paddingLeft: "80px" }}>
-        <img src={logo} alt="logo" />
-      </div>
-      <div className="h-15  flex items-center  ">
-        <img
-          src={line}
-          alt="line"
-          className="absolute left-48 z-10 sm:hidden md:hidden lg:block"
-        />
-      </div>
-      <div className="Destination-reg  flex align-baseline absolute right-0">
-        <div
-          className="text-white w-full flex
-                 justify-between px-20 items-center nav-text "
-        >
-          <Link to="/" className=" font-barslow font-light">
-            <span className=" font-barslow font-bold">00</span> HOME
-          </Link>
-          <Link to="/Destination" className=" font-barslow font-light">
-            <span className=" font-barslow font-bold">01</span> DESTINATION
-          </Link>
-          <Link to="/Crew" className=" font-barslow font-light">
-            <span className=" font-barslow font-bold">02</span> CREW
-          </Link>
-          <Link to="/Technology" className=" font-barslow font-light">
-            <span className=" font-barslow font-bold">03</span> TECHNOLOGY
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Text() {
   return (
-    <p className=" text-white font-barslow text-3xl Destination-body">
+    <p className=" text-white font-barslow lg:text-3xl lg:max-w-[1000px] lg:text-start text-center lg:mx-auto lg:pb-0 pb-8 mt-[-10px]">
       <span className=" text-gray-600">02</span> Meet Your Crew
     </p>
   );
@@ -78,7 +43,7 @@ function NavigateCrew({ crew }) {
 function Step({ setCrew, crew }) {
   return (
     <div
-      className="w-full flex gap-2 Destination-body-crew btnStyle"
+      className="w-full flex gap-2 btnStyle lg:mt-[-90px] mt-[40px] font-barslow lg:max-w-[1000px] max-w-[200px] mx-auto"
       style={{ color: "white" }}
     >
       <button className={crew === 1 ? "button" : ""} onClick={() => setCrew(1)}>

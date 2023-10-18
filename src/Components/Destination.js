@@ -14,7 +14,9 @@ export default function Destination() {
 
   return (
     <div className="Destination">
-      <Navbar />
+      <div>
+        <Navbar />
+      </div>
       <Text />
       <LoopThrough update={update} setUpdate={setUpdate} />
       <Body update={update} />
