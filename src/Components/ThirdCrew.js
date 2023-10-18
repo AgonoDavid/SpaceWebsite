@@ -1,4 +1,5 @@
 import Person3 from "../images/Person-3.png";
+import line from "../images/line.png";
 
 export function ThirdCrew() {
   return (
@@ -21,8 +22,9 @@ export function ThirdCrew() {
         <img
           src={Person3}
           alt="Moonss"
-          className="w-2/5 mx-auto lg:w-50 object-contain pt-6"
+          className="w-2/5 mx-auto lg:w-8/12 object-contain pt-6"
         />
+        <img src={line} alt="line" />
       </div>
     </div>
   );
