@@ -4,7 +4,7 @@ export function ThirdCrew() {
   return (
     <div className="lg:flex justify-between gap-24 Destination-body">
       <div className=" lg:w-4/5  w-50 mx-auto text-center lg:text-start align-middle flex flex-col justify-center  leading-7 mt-[-60px]">
-        <p className=" text-slate-600 text-2xl font-Belleflair lg:text-7xl lg:pb-1">
+        <p className="text-blue-100 text-2xl font-Belleflair lg:text-7xl lg:pb-1">
           PILOT
         </p>
         <p className=" text-white text-3xl font-Belleflair lg:text-6xl lg:pb-6  pb-4">
