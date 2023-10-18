@@ -20,7 +20,7 @@ export default function Header() {
       <nav>
         <section className="MOBILE-MENU flex lg:hidden">
           <div
-            className="HAMBURGER-ICON space-y-2 text-3xl"
+            className="HAMBURGER-ICON space-y-2 text-3xl text-white"
             onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
           >
             <FiMenu />
@@ -28,7 +28,7 @@ export default function Header() {
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
             <div
-              className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
+              className="CROSS-ICON absolute top-0 right-0 px-8 py-8 text-white"
               onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
             >
               <svg
