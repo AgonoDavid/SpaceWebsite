@@ -3,7 +3,6 @@ import { FiMenu } from "react-icons/fi";
 import logo from "../images/logo.svg";
 import line from "../images/line.png";
 
-import MenuOpen from "../images/hamburger-open.svg";
 import { Link } from "react-router-dom";
 
 export default function Header() {
