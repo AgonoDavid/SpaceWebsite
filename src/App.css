@@ -34,6 +34,14 @@
   width: 100%;
   height: 100vh;
 }
+.Technology-bg {
+  background-image: url(/src/images/technology-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
 
 .body {
   max-width: 1000px;
