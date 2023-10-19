@@ -59,13 +59,13 @@ export default function Header() {
 
         <ul className="DESKTOP-MENU hidden space-x-20 lg:flex text-white font-barslow  text-base nav-bg">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">00 Home</Link>
           </li>
           <li>
-            <Link to="/Destination">Destination</Link>
+            <Link to="/Destination">01 Destination</Link>
           </li>
           <li>
-            <Link to="/Crew">Crew</Link>
+            <Link to="/Crew">02 Crew</Link>
           </li>
         </ul>
       </nav>
